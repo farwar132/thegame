@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+    <body>
+        
+        <div id = 'gameField'>
+          <div id = 'field1' class = 'section'>
+            <div class = 'front'></div>
+            <div class = 'back'> <img src="images/3.jpg"> </div>
+          </div>
+          <div id = 'field2' class = 'section'>
+            <div class = 'front'></div>
+            <div class = 'back'><img src="images/1.jpg"></div>
+          </div>
+          <div id = 'field3' class = 'section'>
+            <div class = 'front'></div>
+            <div class = 'back'><img src="images/6.jpg"></div>
+          </div>
+          <div id = 'field4' class = 'section'>
+            <div class = 'front'></div>
+            <div class = 'back'><img src="images/2.jpg"> </div>
+          </div>
+          <div id = 'field5' class = 'section'>
+            <div class = 'front'></div>
+            <div class = 'back'><img src="images/4.jpg"></div>
+          </div>
+          <div id = 'field6' class = 'section'>
+            <div class = 'front'></div>
+            <div class = 'back'><img src="images/5.jpg"></div>
+          </div>
+          <div id = 'field7' class = 'section'>
+            <div class = 'front'></div>
+            <div class = 'back'><img src="images/3.jpg"></div>
+          </div>
+          <div id = 'field8' class = 'section'>
+            <div class = 'front'></div>
+            <div class = 'back'><img src="images/4.jpg"></div>
+          </div>
+          <div id = 'field9' class = 'section'>
+            <div class = 'front'></div>
+            <div class = 'back'><img src="images/2.jpg"></div>
+          </div>
+          <div id = 'field10' class = 'section'>
+            <div class = 'front'></div>
+            <div class = 'back'><img src="images/6.jpg"></div>
+          </div>
+          <div id = 'field11' class = 'section'>
+          <div class = 'front'></div>
+            <div class = 'back'><img src="images/1.jpg"></div>
+          </div>
+          <div id = 'field12' class = 'section'>
+          <div class = 'front'></div>
+            <div class = 'back'><img src="images/5.jpg"></div>
+          </div>
+          <div id = 'steps'>
+          Steps:
+          </div>
+        </div>
+      
+
+
+
+
+    <script>
+
+      let equalMass = [];
+      let counter = 0;
+      let stepCounter = 0;
+      equalMass.length = 2;
+      console.log(equalMass)
+
+      
+
+
+
+
+
+
+  
+      field1.onclick = function(){
+
+        this.querySelector('.front').style.transform = 'rotateY(180deg)';
+        this.querySelector('.back').style.transform = 'rotateY(360deg)';
+        equalMass.unshift('3')
+        equalMass.pop();
+        this.classList.add('activeFields');
+        check()
+
+
+      };
+
+      field2.onclick = function(){
+        this.querySelector('.front').style.transform = 'rotateY(180deg)';
+        this.querySelector('.back').style.transform = 'rotateY(360deg)';
+        
+        
+        equalMass.unshift('1')
+        equalMass.pop();
+        this.classList.add('activeFields');
+        check()
+      };
+
+      field3.onclick = function(){
+        this.querySelector('.front').style.transform = 'rotateY(180deg)';
+        this.querySelector('.back').style.transform = 'rotateY(360deg)';
+        
+       
+        equalMass.unshift('6')
+        equalMass.pop();
+        this.classList.add('activeFields');
+        check()
+        
+      };
+
+      field4.onclick = function(){
+        this.querySelector('.front').style.transform = 'rotateY(180deg)';
+        this.querySelector('.back').style.transform = 'rotateY(360deg)';
+        
+   
+        equalMass.unshift('2')
+        equalMass.pop();
+        this.classList.add('activeFields');
+        check()
+        
+
+      };
+
+      field5.onclick = function(){
+        this.querySelector('.front').style.transform = 'rotateY(180deg)';
+        this.querySelector('.back').style.transform = 'rotateY(360deg)';
+
+        equalMass.unshift('4')
+        equalMass.pop();
+        this.classList.add('activeFields');
+        check()
+
+
+      };
+
+      field6.onclick = function(){
+        this.querySelector('.front').style.transform = 'rotateY(180deg)';
+        this.querySelector('.back').style.transform = 'rotateY(360deg)';
+    
+        equalMass.unshift('5')
+        equalMass.pop();
+        this.classList.add('activeFields');
+        check()
+        
+
+
+      };
+
+      field7.onclick = function(){
+        this.querySelector('.front').style.transform = 'rotateY(180deg)';
+        this.querySelector('.back').style.transform = 'rotateY(360deg)';
+   
+       equalMass.unshift('3')
+       equalMass.pop();
+       this.classList.add('activeFields');
+      check()
+
+
+      };
+
+      field8.onclick = function(){
+        this.querySelector('.front').style.transform = 'rotateY(180deg)';
+        this.querySelector('.back').style.transform = 'rotateY(360deg)';
+   
+        equalMass.unshift('4')
+        equalMass.pop();
+        this.classList.add('activeFields');
+        check()
+        
+
+
+      };
+
+      field9.onclick = function(){
+        this.querySelector('.front').style.transform = 'rotateY(180deg)';
+        this.querySelector('.back').style.transform = 'rotateY(360deg)';
+
+        equalMass.unshift('2')
+        equalMass.pop();
+        this.classList.add('activeFields');
+        check()
+        
+      };
+
+      field10.onclick = function(){
+        this.querySelector('.front').style.transform = 'rotateY(180deg)';
+        this.querySelector('.back').style.transform = 'rotateY(360deg)';
+
+        equalMass.unshift('6')
+        equalMass.pop();
+        this.classList.add('activeFields');
+        check()
+        
+      };
+
+      field11.onclick = function(){
+        this.querySelector('.front').style.transform = 'rotateY(180deg)';
+        this.querySelector('.back').style.transform = 'rotateY(360deg)';
+
+        equalMass.unshift('1')
+        equalMass.pop();
+        this.classList.add('activeFields');
+        check()
+        
+      };
+
+      field12.onclick = function(){
+        this.querySelector('.front').style.transform = 'rotateY(180deg)';
+        this.querySelector('.back').style.transform = 'rotateY(360deg)';
+
+        equalMass.unshift('5')
+        equalMass.pop();
+        this.classList.add('activeFields');
+        check()
+        
+      };
+
+
+      function check() {
+        console.log(equalMass)
+        counter++
+        
+
+        if (equalMass[0]==equalMass[1] && counter == 2 ) {
+
+          overlap();
+          resetMass();
+          plusStep()
+          counter = 0;
+
+        } else if (equalMass[0]!= equalMass[1] && counter == 2) {
+          setTimeout(resetFront, 1100)
+          setTimeout(resetBack, 1100)
+          
+          
+          setTimeout(resetMass, 1100)
+          
+          plusStep()
+          counter = 0;
+
+          } else {
+            ;
+          }
+
+        if (document.getElementsByClassName('equalFields').length == 12) {
+          let newDiv = document.createElement('div');
+          let toHide = document.getElementsByClassName('section');
+          newDiv.className = 'win';
+          for (i=0; i<12;i++) {
+            toHide[i].classList.add('hiddenSection')
+          }
+          
+          gameField.append(newDiv)
+
+        }
+      }
+
+
+
+
+      function overlap() {
+        document.getElementsByClassName('activeFields')[1].classList.add('equalFields');
+        document.getElementsByClassName('activeFields')[0].classList.add('equalFields');
+
+        
+      }
+
+      function resetMass() {
+        delete equalMass[0];
+        delete equalMass[1];
+       
+        document.getElementsByClassName('activeFields')[1].classList.remove('activeFields');
+        document.getElementsByClassName('activeFields')[0].classList.remove('activeFields');
+        
+     }
+
+     function resetFront() {
+
+        document.getElementsByClassName('activeFields')[0].querySelector('.front').style.transform = 'rotateY(360deg)';
+        document.getElementsByClassName('activeFields')[1].querySelector('.front').style.transform = 'rotateY(360deg)';
+        
+     }
+
+    function resetBack() {
+
+        document.getElementsByClassName('activeFields')[0].querySelector('.back').style.transform = 'rotateY(180deg)';
+        document.getElementsByClassName('activeFields')[1].querySelector('.back').style.transform = 'rotateY(180deg)';
+       
+     }
+
+     function plusStep() {
+      stepCounter++
+      document.getElementById('steps').textContent = 'Steps:' + stepCounter
+     }
+    </script>
+
+
+
+    </body>
+
+</html>
